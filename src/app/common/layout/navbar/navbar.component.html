@@ -1,0 +1,40 @@
+<header class="header">
+  <nav class="header__navbar">
+    <div class="header__wrapper wrapper">
+      <a href="/" class="header__page-logo image-lock">
+        <img src="assets/images/logo.svg" 
+          alt="EasyBank Page Logo" 
+          draggable="false"
+          class="icon">
+      </a>
+  
+      <ul role="menubar" class="header__link-list">
+        <li *ngFor="let item of navlinks" 
+          role="menuitem" 
+          class="header__list-item">
+          <a [href]="item.url" class="header__link">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+  
+      <a href="#"class="header__cta-btn button">
+        Request Invite
+      </a>
+  
+      <button (click)="toggleMenu($event)" 
+        type="button"
+        aria-label="Menu Button" 
+        class="header__menu-btn image-lock">
+        <img [src]="!showMenu 
+          ? 'assets/images/icon-hamburger.svg' 
+          : 'assets/images/icon-close.svg'" 
+          alt="icon" 
+          draggable="false"
+          class="icon">
+      </button>
+    </div>
+  </nav>
+</header>
+
+<bank-mobilemenu></bank-mobilemenu>

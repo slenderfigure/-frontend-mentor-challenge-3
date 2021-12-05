@@ -1,0 +1,28 @@
+// Colors
+$darkBlue: #2d314d;
+$limeGreen: #31d35c;
+$brightCyan: #2bb7da;
+
+$greyishBlue: #9698a6;
+$lightGreyishBlue: #f3f4f6;
+$veryLightGrey: #fafafa;
+$black: #000;
+$white: #fff;
+
+// Gradient
+@mixin accent-gradient {
+  background-image: linear-gradient(to right, #31d35c, #00d192, #00cbbb, #00c2d4, #2bb7da);
+}
+
+// Typography 
+$mediumFont: .9rem;
+$smallFont: .85rem;
+$verySnallFont: .75rem;
+
+// Easing Functions
+$easeOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
+
+// Break Points
+$desktopBreakpoint: 1024px;
+$tabletBreakpoint: 800px;
+$mobileBreakpoint: 500px;

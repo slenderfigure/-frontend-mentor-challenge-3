@@ -1,0 +1,14 @@
+<div *ngIf="showMenu" 
+  role="dialog" 
+  class="mobilemenu">
+  <ul #mobilemenu role="menu" class="mobilemenu__link-list">
+    <li *ngFor="let item of navlinks"
+      role="menuitem" 
+      class="mobilemenu__list-item">
+      <a [href]="item.url" 
+        class="mobilemenu__link">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</div>

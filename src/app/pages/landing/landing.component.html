@@ -1,0 +1,88 @@
+<section class="landingpage">
+  <figure class="landingpage__hero-image image-lock">
+    <img src="assets/images/image-mockups.png" 
+      alt="Landing Page Hero - Mockups" 
+      class="icon" 
+      draggable="false">
+  </figure>
+
+  <div class="landingpage__hero">
+    <div class="wrapper">
+      <h1 class="landingpage__title title title-large">Next generation digital banking</h1>
+      <p class="landingpage__description">
+        Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more!
+      </p>
+
+      <a href="#" class="landingpage__cta-btn button">
+        Request Invite
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="why-easybank">
+  <div class="wrapper">
+    <h2 class="why-easybank__title title title-medium">
+      Why choose Easybank?
+    </h2>
+
+    <p class="why-easybank__reason-text">
+      We leverage Open Banking to turn your bank acount into your financial hub. Control your finances like never before.
+    </p>
+
+    <ul class="why-easybank__benefits-list">
+      <li *ngFor="let benefit of benefits;" 
+        class="why-easybank__benefit">
+        <figure class="benefit-icon image-lock">
+          <img [src]="benefit.icon" 
+            [alt]="benefit.name" 
+            draggable="false" 
+            class="icon">
+        </figure>
+
+        <span class="name title title-small">
+          {{ benefit.name }}
+        </span>
+        
+        <p class="description">
+          {{ benefit.description }}
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="latest-articles">
+  <div class="wrapper">
+    <h2 class="latest-articles__title title title-medium">
+      Latest Articles
+    </h2>
+
+    <ul class="latest-articles__list">
+      <li *ngFor="let article of articles;" 
+        class="latest-articles__article">
+        <figure class="thumbnail image-lock">
+          <img [src]="article.thumbnail" 
+            [alt]="article.title" 
+            draggable="false" 
+            class="icon">
+        </figure>
+
+        <div class="article-body">
+          <span class="author">
+            By {{ article.author }}
+          </span>
+  
+          <a href="#" 
+            class="article-title title title-very-small">
+            {{ article.title }}
+          </a>
+          
+          <p class="description">
+            {{ article.body }}
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+@import '/src/styles.scss';
+
+.footer {
+  padding: 3rem 1.5rem;
+  color: $white;
+  background-color: $darkBlue;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+
+    &:last-of-type {
+      align-items: flex-end;
+
+      @media only screen and (max-width: $mobileBreakpoint) {
+        align-items: center; 
+      }
+    }
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      align-items: center; 
+    }
+  }
+
+  &__col-alt {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+
+    @media only screen and (max-width: $tabletBreakpoint) {
+      gap: 4rem;
+    }
+    
+    @media only screen and (max-width: $mobileBreakpoint) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, auto));
+    gap: 10%;
+
+    @media only screen and (max-width: $tabletBreakpoint) {
+      gap: 5%;
+    }
+
+    @media only screen and (max-width: $mobileBreakpoint) {
+      grid-template-columns: auto;
+      justify-content: center;
+      gap: 4rem;
+    }
+  }
+
+  &__page-logo {
+    display: block;
+    flex-shrink: 0;
+    border-radius: .4rem;
+  }
+
+  &__medialink-list {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  
+  &__navlink-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: $mediumFont;
+    line-height: 1.2;
+    
+    @media only screen and (max-width: $mobileBreakpoint) {
+      text-align: center;  
+    }
+  }
+
+  &__navlink {
+    transition: color .5s $easeOutQuint;
+
+    &:hover {
+      color: $limeGreen;
+    }
+  }
+
+  &__copyright-info {
+    font-size: $smallFont;
+    color: $greyishBlue;
+  }
+
+}

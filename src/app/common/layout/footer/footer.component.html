@@ -1,0 +1,48 @@
+<footer class="footer">
+  <div class="footer__wrapper wrapper">
+    <div class="footer__col">
+      <a href="/" class="footer__page-logo image-lock">
+        <img src="assets/images/logo-white.svg" 
+          alt="EasyBank Page Logo" 
+          draggable="false"
+          class="icon">
+      </a>
+
+      <ul role="menubar" class="footer__medialink-list">
+        <li *ngFor="let item of mediaLinks" 
+          role="menuitem" 
+          class="footer__medialist-item">
+          <a [href]="item.url" 
+            [attr.aria-label]="item.label"
+            [innerHTML]="getHTML(item.icon)"
+            class="footer__medialink">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col-alt">
+      <ul *ngFor="let col of navlinks" 
+        role="menubar" 
+        class="footer__navlink-list">
+        <li *ngFor="let item of col" 
+          role="menuitem" 
+          class="footer__navlist-item">
+          <a [href]="item.url" class="footer__navlink">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <a href="#"class="footer__cta-btn button">
+        Request Invite
+      </a>
+
+      <p class="footer__copyright-info">
+        &copy; Easybank. All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>

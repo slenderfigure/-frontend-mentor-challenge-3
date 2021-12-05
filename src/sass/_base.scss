@@ -1,0 +1,51 @@
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  color: $greyishBlue;
+  font-family: 'Public Sans';
+  font-size: 1rem;
+  box-sizing: border-box;
+
+  &[active-menu] {
+    overflow: hidden;
+  }
+
+  ::selection {
+    color: $white;
+    background-color: rgba($brightCyan, .5);
+  }
+}
+
+*,
+*::before,
+*::after {
+  color: inherit;
+  font: inherit;
+  box-sizing: inherit;
+  outline-color: $greyishBlue;
+}
+
+img {
+  display: block;
+}
+
+button {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer-socialmedia-svg path {
+  transition: fill .5s $easeOutQuint;
+      
+  &:hover {
+    fill: $limeGreen;
+  }
+}
